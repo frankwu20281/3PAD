@@ -463,7 +463,7 @@ class Battle():
             self.exit_menu()
             return
         
-        damage_multiplyer = self.player_data["level"] *1.05
+        damage_multiplyer = 1 + self.player_data["level"] *0.05
         
         base_damage = random.randint(90, 110)
         
@@ -674,33 +674,46 @@ class Math:
             answer = operands[-1]
             return answer, question
         def generate_mixed_algebra_question(num_variables):
-            operators = {
-                '+': operator.add,
-                '-': operator.sub,
-                '*': operator.mul,
-                '/': operator.floordiv
-            }
+            while True:
+                operators = ['+', '-', '*', '/']
+                operands = [random.randint(1, 10)]
 
-            operands = [random.randint(1, 10) for _ in range(num_variables)]
-            op_symbols = [random.choice(list(operators.keys())) for _ in range(num_variables - 1)]
+                op_symbols = []
+                for _ in range(num_variables - 1):
+                    operator = random.choice(operators)
+                    
+                    if operator == '/':
+                        # Remove the previous number (last operand)
+                        prev_operand = operands.pop()
+                        # Generate a new operand and multiply with the previous one
+                        next_operand = random.randint(1, 10)
+                        numerator = prev_operand * next_operand
+                        # Append the numerator (product) back to operands
+                        operands.append(numerator)
+                        # Append the divisor
+                        operands.append(next_operand)
+                    else:
+                        next_operand = random.randint(1, 10)
+                        operands.append(next_operand)
+                    
+                    op_symbols.append(operator)
 
-            question_parts = []
-            for i in range(num_variables - 1):
-                question_parts.append(str(operands[i]))
-                question_parts.append(op_symbols[i])
-            question_parts.append(str(operands[-1]))
+                # Construct the question
+                question_parts = []
+                for i in range(num_variables - 1):
+                    question_parts.append(str(operands[i]))
+                    question_parts.append(op_symbols[i])
+                question_parts.append(str(operands[-1]))
 
-            question = ' '.join(question_parts)
+                question = ' '.join(question_parts)
 
-            answer = operands[0]
-            for i in range(1, num_variables):
-                op = operators[op_symbols[i - 1]]
-                if op_symbols[i - 1] == '/' and answer % operands[i] != 0:
-                    while answer % operands[i] != 0:
-                        operands[i] = random.randint(1, 10)
-                answer = op(answer, operands[i])
-
-            return answer, question
+                # Evaluate the expression using eval
+                answer = eval(question)
+                
+                if float(answer).is_integer() == True:
+                    return int(answer), question
+                else: 
+                    continue
 
         if question_type == 'addition':
             return generate_addition_question(num_variables)
