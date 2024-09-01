@@ -1,0 +1,79 @@
+{
+    "1": {
+        "password": "1",
+        "data": {
+            "position": [
+                560,
+                230
+            ],
+            "health": 9880,
+            "level": 1,
+            "score": 0,
+            "items": {
+                "mini heal": 999,
+                "wooden sword": 998,
+                "basic shield": 1000,
+                "basic acid potion": 1000
+            }
+        },
+        "save data": {
+            "monster": [
+                [
+                    658,
+                    200
+                ],
+                [
+                    697,
+                    200
+                ],
+                [
+                    702,
+                    240
+                ],
+                [
+                    120,
+                    120
+                ],
+                [
+                    80,
+                    280
+                ]
+            ],
+            "green monster": [
+                [
+                    560,
+                    200
+                ],
+                [
+                    600,
+                    240
+                ]
+            ]
+        }
+    },
+    "frank": {
+        "password": "1",
+        "data": {
+            "position": [
+                1200,
+                400
+            ],
+            "health": 400,
+            "level": 2,
+            "score": 0,
+            "items": {
+                "mini heal": 10,
+                "wooden sword": 10
+            }
+        },
+        "save data": {
+            "monster": [
+                [
+                    1000,
+                    400
+                ]
+            ],
+            "green monster": []
+        }
+    }
+}

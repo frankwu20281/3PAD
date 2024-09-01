@@ -1,0 +1,60 @@
+{
+     "1": {
+          "password": "1",
+          "data": {
+               "position": [
+                    200,
+                    875
+               ],
+               "health": 180,
+               "level": 1,
+               "score": 0,
+               "high score": 100,
+               "deaths": 4,
+               "items": {
+                    "mini heal": 10,
+                    "wooden sword": 10
+               }
+          },
+          "save data": {
+               "addition monster": [
+                    [
+                         480,
+                         206
+                    ],
+                    [
+                         400,
+                         880
+                    ],
+                    [
+                         480,
+                         880
+                    ]
+               ],
+               "algebra monster": [
+                    [
+                         920,
+                         474
+                    ]
+               ],
+               "hogrider": [
+                    [
+                         688,
+                         360
+                    ],
+                    [
+                         448,
+                         360
+                    ],
+                    [
+                         248,
+                         360
+                    ],
+                    [
+                         200,
+                         840
+                    ]
+               ]
+          }
+     }
+}

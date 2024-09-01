@@ -1,0 +1,57 @@
+{
+
+    "monster data":
+    
+        {
+        "monster": "addition",
+
+        "green monster":"algebra"
+        }, 
+    
+    "terrain states": 
+        {
+            "non solids": ["grass"]
+        }, 
+    
+    "items": 
+        {
+            "heals": 
+            {
+                "mini heal": [200, "sososodfiosjofjoasdjlkjlkds;aj;flkjsadkl;fjkl;dsajfklasl;kdfj"], 
+                "full heal": [500, "de"],
+                "he": [200, "de"], 
+                "ha": [200, "de"]
+            }, 
+            "weapons": 
+                {
+                    "wooden sword": [1.1, "trusty wooden sword"], 
+                    "iron sword": [1.4, "now iron!"]
+                }, 
+            "shields": 
+                {
+                    "basic shield": [200,"shield"],
+                    "mega sheild": [200,"shield"], 
+                    "slurp juice": [11111,"shield"]
+                }, 
+            "potions": 
+                {
+                    "basic acid potion": [0.9,"potions"],
+                    "strong acid potion": [0.8,"potions"]
+                }
+        }, 
+    "terrain codes":
+        { 
+            "." : "grass",
+            "w" : "wall", 
+            "=" : "border", 
+            "T" : "teleport", 
+            "M" : "monster", 
+            "e" : "green monster",
+            "x" : "spawn"
+           
+        }
+    
+    
+    
+
+}
