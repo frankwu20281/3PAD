@@ -1,0 +1,96 @@
+{
+
+    "monster data":
+    
+        {
+        "fire monster": "addition",
+        "slime": "algebra",
+        "hogrider":"division", 
+        "turtle buddy" : "multiplication"
+        }, 
+    
+    "terrain states": 
+        {
+            "non solids": ["grass", "wood floor", "water", "sand", "dirt"]
+        }, 
+    
+    "items": 
+        {
+            "heals": 
+            {
+                "mini heal": [100, "Go-to heal, heals 100 health"], 
+                "full heal": [200, "Gets you right back to shape, heals 200 health"]
+    
+            }, 
+            "weapons": 
+                {
+                    "wooden sword": [1.3, "Trusty wooden sword (x1.3 dmg)"], 
+                    "iron sword": [1.5, "Now iron! (x1.5 dmg)"], 
+                    "insta kill" :[100, "As the name says, instant death!"]
+                }, 
+            "shields": 
+                {
+                    "basic shield": [100,"Basic shield with 100 health"],
+                    "mega sheild": [200,"Stronger shield with 200 health"], 
+                    "slurp juice": [250,"So much shield! (250 health)"]
+                }, 
+            "potions": 
+                {
+                    "basic acid potion": [0.9,"Chuck at enemies to make them weaker! (x0.9 debuff)"],
+                    "strong acid potion": [0.8,"More deadly! (x0.8 debuff)"], 
+                    "lava potion": [0.5,"Burns monster significantly! (x0.5 debuff)"]
+
+                }
+        }, 
+    "loot table": 
+        {
+                
+            "heals": 
+            {
+                "mini heal": 100, 
+                "full heal": 50
+            }, 
+            "weapons": 
+                {
+                    "wooden sword":60, 
+                    "iron sword":20
+                }, 
+            "shields": 
+                {
+                    "basic shield": 80,
+                    "mega sheild": 30, 
+                    "slurp juice": 10
+                }, 
+            "potions": 
+                {
+                    "basic acid potion": 80,
+                    "strong acid potion":50,
+                    "lava potion" : 20
+                }
+                
+        },
+    "terrain codes":
+        { 
+            "." : "grass",
+            "w" : "wall", 
+            "=" : "border", 
+            "T" : "teleport", 
+            "f" : "wood floor", 
+            "o" : "water", 
+            "s" : "sand", 
+            "d" : "dirt"
+
+        }, 
+
+    "monster codes":
+        {
+            "h" : "hogrider",
+            "M" : "fire monster", 
+            "e" : "slime", 
+            "t" : "turtle buddy"
+        }
+    
+    
+    
+
+}
