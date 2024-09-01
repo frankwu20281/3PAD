@@ -435,6 +435,7 @@ class Battle():
             self.animate_change_exponential(var = self.player_shield_var,current= int(self.player_shield_var.get()), target =  self.shield_health, duration = 1.5)  # Animate the change in player health number.  
         self.game_instance.after(1600, lambda:self.low_health(flashed= True) if int(self.player_health_var.get()) <=200 else self.player_health_label.config(fg="black"))   # If player health is under 200 then start flashing. 
         self.reset_stat_vars()  # Reset all battling variables to prepare for the next battle interaction. 
+        self.info_display_var.set(f"Shield active: {self.shield_active}\nWeapon active: {self.weapon_active}\nEnemy debuff active: {self.debuff_active}")    
         self.action_response_text.set(f"Monster dealt {damage} damage to player")    # Text to tell user how much damage was dealt.
         self.game_instance.after(4000, lambda:self.player_death() if self.player_data["health"] <1 else self.menu_selection_frame.lift())   # If player health under 0 then end game, else go to next battle interaction.
 
